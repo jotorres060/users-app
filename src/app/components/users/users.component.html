@@ -1,0 +1,20 @@
+<div>
+    <h1 class="text-center">Users</h1>
+    <hr>
+
+    <div class="d-flex justify-content-end">
+      <form class="form-inline mb-3">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar"
+          #userText (keyup.enter)="findUser(userText.value)">
+
+        <button class="btn btn-outline-success btn-sm my-2 my-sm-0" type="submit"
+          (click)="findUser(userText.value)">
+          Buscar
+        </button>
+      </form>
+    </div>
+  
+    <div class="card-columns">
+      <app-users-card *ngFor="let user of users" [user]="user"></app-users-card>
+    </div>
+</div>

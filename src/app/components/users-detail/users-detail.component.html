@@ -1,0 +1,19 @@
+<div>
+    <div class="row">
+      <div class="col-md-4">
+        <img class="img-fluid mb-3" [src]="user.avatar" [alt]="user.first_name">
+        <a class="btn btn-outline-secondary btn-block" routerLink="/users">
+          Regresar
+        </a>
+      </div>
+
+      <div class="col-md-8 pt-5">
+        <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+        <hr>
+
+        <p><span class="font-weight-bold">ID:</span> {{ user.id }}</p>
+        <p><span class="font-weight-bold">Email:</span> {{ user.email }}</p>
+        <p><span class="font-weight-bold">Género:</span> {{ user.gender }}</p>
+      </div>
+    </div>
+  </div>

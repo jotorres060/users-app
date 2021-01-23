@@ -1,0 +1,14 @@
+<div class="card shadow-sm">
+    <img class="card-img-top" [src]="user.avatar" [alt]="user.first_name" loading="lazy">
+    <div class="card-body">
+      <h5 class="card-title">{{ user.first_name }} {{ user.last_name }}</h5>
+      <p class="card-text mb-0">{{ user.email }}</p>
+      <p class="card-text text-right">
+        <small class="text-muted font-weight-bold">{{ user.gender }}</small>
+      </p>
+
+      <a class="btn btn-outline-success btn-block" [routerLink]="['/users/', user.id]">
+        Ver detalle
+      </a>
+    </div>
+</div>
